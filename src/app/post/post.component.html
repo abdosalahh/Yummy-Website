@@ -1,0 +1,79 @@
+<div class="contain">
+  <div class="nav">
+    <div class="logo">
+      <h1>Yummy<span>.</span></h1>
+    </div>
+    <div class="choices">
+      <ul>
+        <li><a routerLink="/home"><i class="fas fa-house"></i></a></li>
+        <li><a routerLink="/menus"><i class="fas fa-utensils"></i></a></li>
+        <li><a routerLink="/favourite"><i class="fas fa-bookmark"></i></a></li>
+        <li><a routerLink="/planing"><i class="fas fa-table"></i></a></li>
+        <li><a routerLink="/market"><i class="fas fa-cart-shopping"></i></a></li>
+        <li><a routerLink="/profile"><i class="fas fa-user"></i></a></li>
+      </ul>
+    </div>
+    <a routerLink="/login"><button id="searchButton">Logout</button></a>
+  </div>
+  <div class="screen">
+    <div class="person">
+      <div class="left">
+        <img [src]="postcreator[0].userphoto" alt="User Photo" *ngIf="postcreator[0].userphoto">
+        <span *ngIf="UserInterfaces.length > 0">{{ postcreator[0].username }}</span>
+      </div>
+      <button id="followBtn" class="follow-button">Follow</button>
+    </div>
+    <div class="tab">
+      <div class="left">
+        <div class="desc">
+          <span id="recipeName"></span>
+          <i class="fas fa-heart" id="heartIcon" [style.color]="recipes[0]?.liked" (click)="toggleHeart(recipes[0])"></i>
+        </div>
+        <img id="recipePhoto" src="" alt="Recipe Photo">
+        <div class="rating" data-rating="0">
+          <i class="fas fa-star" data-index="1" [class.active]="inputValue >= 1"></i>
+          <i class="fas fa-star" data-index="2" [class.active]="inputValue >= 2"></i>
+          <i class="fas fa-star" data-index="3" [class.active]="inputValue >= 3"></i>
+          <i class="fas fa-star" data-index="4" [class.active]="inputValue >= 4"></i>
+          <i class="fas fa-star" data-index="5" [class.active]="inputValue >= 5"></i>
+        </div>
+        <input type="number" [(ngModel)]="inputValue" name="inputValue" (change)="updateStars()">
+        <button (click)="giverate(recipes[0])">Get Value</button>
+        <div class="dtls">
+          <p><span id="recipeType"></span> </p>
+          <p><span id="recipeCuisine"></span></p>
+          <p id="cookingTime"></p>
+        </div>
+      </div>
+      <div class="additional-info">
+        <h2>Ingredients:</h2>
+        <p id="ingredientsList"></p>
+        <h2>Cooking Steps:</h2>
+        <ol id="cookingSteps"></ol>
+        <h2>Nutritional Facts:</h2>
+        <p id="nutritionalBenefits"></p>
+      </div>
+    </div>
+    <div class="interaction">
+      <i class="fas fa-thumbs-up" id="likeIcon" [style.color]="like" (click)="likefn(recipes[0])"></i>
+      <p><span id="total likes"></span>Like</p>
+      <div class="comment-bar">
+        <input type="text" id="commentInput" placeholder="comment here..." [(ngModel)]="newCommentText">
+        <button id="commentBtn" (click)="addComment()"> <i class="fas fa-paper-plane"></i></button>
+      </div>
+      <p id="commentTab"><span id="commentTab1"></span>Comments</p>
+    </div>
+  </div>
+</div>
+<div id="modalBackground"></div>
+<div id="commentForm" class="modal">
+  <div class="comments">
+    <div class="comment" *ngFor="let comment of comments">
+      <img [src]="comment.userphoto" alt="User Photo">
+      <div class="comment-details">
+        <h3>{{ comment.username}}</h3>
+        <p>{{ comment.comment }}</p>
+      </div>
+    </div>
+  </div>
+</div>

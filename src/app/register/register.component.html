@@ -1,0 +1,31 @@
+<div class="contain">
+    <div class="register">
+        <img class="user" src="../../assets/img/Auth/user.jpg" alt="">
+        <h1>Welcome Yummy!</h1>
+        @if(errorMessage)
+        {
+          <div class="errorMessage">{{errorMessage}}</div>
+        }
+        <form [formGroup]="form" (ngSubmit)="onSubmitRegister()">
+            <input type="text" id="name" placeholder="Name" formControlName="name">
+            <input type="email" id="email" placeholder="Email" formControlName="email">
+            <input type="tel" id="phone" placeholder="Phone Number" formControlName="phone">
+            <input type="number" id="age" placeholder="Age" formControlName="age">
+            <input type="password" id="password" placeholder="Password" formControlName="password">
+            <input type="password" id="confirm-password" placeholder="Confirm Password" formControlName="confirmPassword">
+            
+            <button type="submit">Create Account</button>
+        </form>
+        <div class="bottom-div">
+            <div class="line-or">
+                <span>OR</span>
+            </div>
+            <div class="btns">
+                <a href="#" class="btn"><img class="fb" src="../../assets/img/Auth/facebook.png"></a>
+                <a href="#" class="btn"><img class="google" src="../../assets/img/Auth/google.png"></a>
+            </div>
+            <p class="signup">Already have an account? <a [routerLink]="['/login']">Sign In</a></p>
+        </div>
+    </div>
+  </div>
+  

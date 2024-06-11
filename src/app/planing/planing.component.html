@@ -1,0 +1,57 @@
+<div class="contain">
+  <div class="nav">
+    <!-- Navigation menu -->
+    <div class="logo">
+      <h1>Yummy<span>.</span></h1>
+    </div>
+    <div class="choices">
+      <ul>
+        <li><a routerLink="/home"><i class="fas fa-house"></i></a></li>
+        <li><a routerLink="/menus"><i class="fas fa-utensils"></i></a></li>
+        <li><a routerLink="/favourite"><i class="fas fa-bookmark"></i></a></li>
+        <li><a routerLink="/planing"><i class="fas fa-table"></i></a></li>
+        <li><a routerLink="/market"><i class="fas fa-cart-shopping"></i></a></li>
+        <li><a routerLink="/profile"><i class="fas fa-user"></i></a></li>
+      </ul>
+    </div>
+    <a routerLink="/shop"><i class="fa-solid fa-receipt"></i></a>
+    <a routerLink="/login"><button id="searchButton">Logout</button></a>
+  </div>
+  <div class="screen">
+    <div class="plans">
+      <!-- Template for each day -->
+      <ng-container *ngFor="let day of ['Saturday', 'Sunday', 'Monday', 'Tuesday', 'Wednesday', 'Thursday', 'Friday']; let i = index">
+        <div class="day">
+          <h2>{{ day }}</h2>
+          <div class="typs">
+            <p>Breakfast</p>
+            <p>Lunch</p>
+            <p>Dinner</p>
+            <p>Snacks</p>
+          </div>
+          <div class="items">
+            <!-- Dropdown menus -->
+            <select (change)="selectMeal($event, day, 'breakfast')">
+              <option value="None">None</option>
+              <option *ngFor="let recipe of breakfastRecipes" [value]="recipe.id" [selected]="selectedMeals[day]?.['breakfast'] === recipe.id">{{ recipe.name }}</option>
+            </select>
+            <select (change)="selectMeal($event, day, 'lunch')">
+              <option value="None">None</option>
+              <option *ngFor="let recipe of lunchRecipes" [value]="recipe.id" [selected]="selectedMeals[day]?.['lunch'] === recipe.id">{{ recipe.name }}</option>
+            </select>
+            <select (change)="selectMeal($event, day, 'dinner')">
+              <option value="None">None</option>
+              <option *ngFor="let recipe of dinnerRecipes" [value]="recipe.id" [selected]="selectedMeals[day]?.['dinner'] === recipe.id">{{ recipe.name }}</option>
+            </select>
+            <select (change)="selectMeal($event, day, 'snacks')">
+              <option value="None">None</option>
+              <option *ngFor="let recipe of snacksRecipes" [value]="recipe.id" [selected]="selectedMeals[day]?.['snacks'] === recipe.id">{{ recipe.name }}</option>
+            </select>
+          </div>
+          <!-- Submit button -->
+          <button (click)="onSubmit()">Submit</button>
+        </div>
+      </ng-container>
+    </div>
+  </div>
+</div>

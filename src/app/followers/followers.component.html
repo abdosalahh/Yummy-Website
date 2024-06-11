@@ -1,0 +1,75 @@
+<div class="contain">
+  <div class="nav">
+    <div class="logo">
+        <h1>Yummy<span>.</span></h1>
+    </div>
+    <div class="choices">
+        <ul>
+          <li><a routerLink="/home"><i class="fas fa-house"></i></a></li>
+          <li><a routerLink="/menus"><i class="fas fa-utensils"></i></a></li>
+          <li><a routerLink="/favourite"><i class="fas fa-bookmark"></i></a></li>
+          <li><a routerLink="/planing"><i class="fas fa-table"></i></a></li>
+          <li><a routerLink="/market"><i class="fas fa-cart-shopping"></i></a></li>
+          <li><a routerLink="/profile"><i class="fas fa-user"></i></a></li>
+        </ul>
+    </div>
+    <a routerLink="/login"><button id="searchButton">Logout</button></a>
+  </div>
+  <div class="screen">
+    <div class="infsection">
+        <div class="imgsection">
+            <img id="user-photo-num" src="" alt="user Photo">
+        </div>
+        <div class="statsection">
+            <div class="name">
+                <span id="user-name"></span>
+                <button>Edite Profile</button>
+                <button>Archive</button>
+                <i class="fas fa-gear"></i>
+            </div>
+            <div class="fol">
+                <a routerLink="/profile">
+                    <span id="user-posts-num"></span>
+                    <p>Post</p>
+                </a>
+                <a routerLink="/followers">
+                    <span id="user-followers-num"></span>
+                    <p>Followers</p>
+                </a>
+                <a routerLink="/following">
+                    <span id="user-following-num"></span>
+                    <p>Following</p>
+                </a>
+            </div>
+            <div class="link">
+                <img src="../../assets/img/media/face.jpg">
+                <img src="../../assets/img/media/insta.jpg">
+                <img src="../../assets/img/media/snap.jpg">
+                <img src="../../assets/img/media/linked.jpg">
+                <img src="../../assets/img/media/Youtube.jpg">
+            </div>
+        </div>
+      </div>
+      <hr>
+      <div class="followsection">
+        <div class="desc" *ngFor="let username of UserInterfaces2"> 
+          <div class="desc" *ngFor="let user2 of UserInterfaces[0].followers"> 
+            <div class="tab" *ngIf="username.id === user2">
+  
+          <div class="person">
+              <a routerLink="/profile">
+                <div class="left">
+                  <img src="../../assets/img/users/youssef.jpg">
+                  <span>{{ username.username  | titlecase }}</span>
+                </div>
+              </a>
+              <button *ngIf="!isFollowing(username.id)" (click)="toggleFollow(username.id, $event)">
+                Follow
+              </button>
+              <button *ngIf="isFollowing(username.id)" (click)="toggleFollow(username.id, $event)">
+                Un Follow
+              </button>
+          </div>
+      </div>
+  </div>
+</div>

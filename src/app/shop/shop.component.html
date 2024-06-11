@@ -1,0 +1,39 @@
+<div class="contain">
+    <div class="nav">
+      <div class="logo">
+          <h1>Yummy<span>.</span></h1>
+      </div>
+      <div class="choices">
+          <ul>
+            <li><a routerLink="/home"><i class="fas fa-house"></i></a></li>
+            <li><a routerLink="/menus"><i class="fas fa-utensils"></i></a></li>
+            <li><a routerLink="/favourite"><i class="fas fa-bookmark"></i></a></li>
+            <li><a routerLink="/planing"><i class="fas fa-table"></i></a></li>
+            <li><a routerLink="/market"><i class="fas fa-cart-shopping"></i></a></li>
+            <li><a routerLink="/profile"><i class="fas fa-user"></i></a></li>
+          </ul>
+      </div>
+      <a routerLink="/shop"><i class="fa-solid fa-receipt"></i></a>
+      <a routerLink="/login"><button id="searchButton">Logout</button></a>
+    </div>
+    <div class="screen">
+        <div class="section-header">
+            <p>Check Our <span>Yummy Ingredients</span></p>
+        </div>
+  
+        <!-- Section to display selected ingredients -->
+        <div class="section-select">
+          <div class="section">
+            <h3>Shopping  List</h3>
+          </div>
+          <div class="items">
+            <div class="frow">
+              <ul>
+                <li *ngFor="let ingredient of selectedIngredients">{{ ingredient }}</li>
+              </ul>
+            </div>
+          </div>
+        </div>
+    </div>
+  </div>
+  

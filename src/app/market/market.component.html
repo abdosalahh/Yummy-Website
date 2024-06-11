@@ -1,0 +1,643 @@
+<div class="contain">
+    <div class="nav">
+      <div class="logo">
+          <h1>Yummy<span>.</span></h1>
+      </div>
+      <div class="choices">
+          <ul>
+            <li><a routerLink="/home"><i class="fas fa-house"></i></a></li>
+            <li><a routerLink="/menus"><i class="fas fa-utensils"></i></a></li>
+            <li><a routerLink="/favourite"><i class="fas fa-bookmark"></i></a></li>
+            <li><a routerLink="/planing"><i class="fas fa-table"></i></a></li>
+            <li><a routerLink="/market"><i class="fas fa-cart-shopping"></i></a></li>
+            <li><a routerLink="/profile"><i class="fas fa-user"></i></a></li>
+          </ul>
+      </div>
+      <a routerLink="/shop"><i class="fa-solid fa-receipt"></i></a>
+      <a routerLink="/login"><button id="searchButton">Logout</button></a>
+    </div>
+    <div class="screen">
+        <div class="section-header">
+            <h2>Our Market</h2>
+            <p>Check Our <span>Yummy Market</span></p>
+            <ul>
+              <li><a [routerLink]="['/market']" fragment="spices">Spices</a></li>
+              <li><a [routerLink]="['/market']" fragment="fruits">Fruits</a></li>
+              <li><a [routerLink]="['/market']" fragment="vegetables">Vegetables</a></li>
+              <li><a [routerLink]="['/market']" fragment="meats">Meats</a></li>
+              <li><a [routerLink]="['/market']" fragment="dryers">Dryers</a></li>
+              <li><a [routerLink]="['/market']" fragment="fluids">Fluids</a></li>
+              <li><a [routerLink]="['/market']" fragment="snacks">Snacks</a></li>
+            </ul>
+        </div>
+  
+        <!-- Spices  section-->
+        <!-------------------->
+        <div id="spices" class="section-select active">
+        <div class="section">
+            <p>Section</p>
+            <h3>Spices</h3>
+        </div>
+        <div class="items">
+            <div class="frow">
+                <div class="item">
+                    <img src="../../assets/img/spices/flfl.jpg">
+                    <div class="price">
+                        <div class="left">
+                            <h1>Black pepper</h1>
+                            <p>6.7$</p>
+                        </div>
+                        <div class="right">
+                            <i class="fa-solid fa-cart-plus"></i>
+                        </div>
+                    </div>
+                </div>
+                <div class="item">
+                    <img src="../../assets/img/spices/kerfa.jpg">
+                    <div class="price">
+                        <div class="left">
+                            <h1>cinnamon</h1>
+                            <p>4.32$</p>
+                        </div>
+                        <div class="right">
+                            <i class="fa-solid fa-cart-plus"></i>
+                        </div>
+                    </div>
+                </div>
+                <div class="item">
+                    <img src="../../assets/img/spices/kamon.jpg">
+                    <div class="price">
+                        <div class="left">
+                            <h1>cumin</h1>
+                            <p>7.13$</p>
+                        </div>
+                        <div class="right">
+                            <i class="fa-solid fa-cart-plus"></i>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="srow">
+                <div class="item">
+                    <img src="../../assets/img/spices/kozbra.jpg">
+                    <div class="price">
+                        <div class="left">
+                            <h1>coriander</h1>
+                            <p>3.7$</p>
+                        </div>
+                        <div class="right">
+                            <i class="fa-solid fa-cart-plus"></i>
+                        </div>
+                    </div>
+                </div>
+                <div class="item">
+                    <img src="../../assets/img/spices/habhan.jpg">
+                    <div class="price">
+                        <div class="left">
+                            <h1>Cardamom</h1>
+                            <p>5.56$</p>
+                        </div>
+                        <div class="right">
+                            <i class="fa-solid fa-cart-plus"></i>
+                        </div>
+                    </div>
+                </div>
+                <div class="item">
+                    <img src="../../assets/img/spices/meat.jpg">
+                    <div class="price">
+                        <div class="left">
+                            <h1>Meat spices</h1>
+                            <p>5.62$</p>
+                        </div>
+                        <div class="right">
+                            <i class="fa-solid fa-cart-plus"></i>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        </div>
+  
+        <!-- Fruits section-->
+        <!------------------->
+        <div id="fruits" class="section-select">
+        <div class="section">
+            <p>Section</p>
+            <h3>Fruits</h3>
+        </div>
+        <div class="items">
+            <div class="frow">
+                <div class="item">
+                    <img src="../../assets/img/fruits/apple.jpg">
+                    <div class="price">
+                        <div class="left">
+                            <h1>Apple</h1>
+                            <p>3.4$</p>
+                        </div>
+                        <div class="right">
+                            <i class="fa-solid fa-cart-plus"></i>
+                        </div>
+                    </div>
+                </div>
+                <div class="item">
+                    <img src="../../assets/img/fruits/banana.jpg">
+                    <div class="price">
+                        <div class="left">
+                            <h1>Banana</h1>
+                            <p>4.32$</p>
+                        </div>
+                        <div class="right">
+                            <i class="fa-solid fa-cart-plus"></i>
+                        </div>
+                    </div>
+                </div>
+                <div class="item">
+                    <img src="../../assets/img/fruits/batekh.jpg">
+                    <div class="price">
+                        <div class="left">
+                            <h1>Watermelon</h1>
+                            <p>4.13$</p>
+                        </div>
+                        <div class="right">
+                            <i class="fa-solid fa-cart-plus"></i>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="srow">
+                <div class="item">
+                    <img src="../../assets/img/fruits/khoukh.jpg">
+                    <div class="price">
+                        <div class="left">
+                            <h1>peach</h1>
+                            <p>3.7$</p>
+                        </div>
+                        <div class="right">
+                            <i class="fa-solid fa-cart-plus"></i>
+                        </div>
+                    </div>
+                </div>
+                <div class="item">
+                    <img src="../../assets/img/fruits/mango.jpg">
+                    <div class="price">
+                        <div class="left">
+                            <h1>Mango</h1>
+                            <p>5.56$</p>
+                        </div>
+                        <div class="right">
+                            <i class="fa-solid fa-cart-plus"></i>
+                        </div>
+                    </div>
+                </div>
+                <div class="item">
+                    <img src="../../assets/img/fruits/meshmesh.jpg">
+                    <div class="price">
+                        <div class="left">
+                            <h1>Apricot</h1>
+                            <p>5.62$</p>
+                        </div>
+                        <div class="right">
+                            <i class="fa-solid fa-cart-plus"></i>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        </div>
+  
+        <!-- Vegetables  section-->
+        <!------------------------>
+        <div id="vegetables" class="section-select">
+        <div class="section">
+            <p>Section</p>
+            <h3>Vegetables</h3>
+        </div>
+        <div class="items">
+            <div class="frow">
+                <div class="item">
+                    <img src="../../assets/img/vegetables/basl.jpg">
+                    <div class="price">
+                        <div class="left">
+                            <h1>Onion</h1>
+                            <p>6.7$</p>
+                        </div>
+                        <div class="right">
+                            <i class="fa-solid fa-cart-plus"></i>
+                        </div>
+                    </div>
+                </div>
+                <div class="item">
+                    <img src="../../assets/img/vegetables/btates.jpg">
+                    <div class="price">
+                        <div class="left">
+                            <h1>Potatoes</h1>
+                            <p>4.32$</p>
+                        </div>
+                        <div class="right">
+                            <i class="fa-solid fa-cart-plus"></i>
+                        </div>
+                    </div>
+                </div>
+                <div class="item">
+                    <img src="../../assets/img/vegetables/felfel.jpg">
+                    <div class="price">
+                        <div class="left">
+                            <h1>pepper</h1>
+                            <p>7.13$</p>
+                        </div>
+                        <div class="right">
+                            <i class="fa-solid fa-cart-plus"></i>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="srow">
+                <div class="item">
+                    <img src="../../assets/img/vegetables/khear.jpg">
+                    <div class="price">
+                        <div class="left">
+                            <h1>Cucumber</h1>
+                            <p>3.7$</p>
+                        </div>
+                        <div class="right">
+                            <i class="fa-solid fa-cart-plus"></i>
+                        </div>
+                    </div>
+                </div>
+                <div class="item">
+                    <img src="../../assets/img/vegetables/kronb.jpg">
+                    <div class="price">
+                        <div class="left">
+                            <h1>Cabbage</h1>
+                            <p>5.56$</p>
+                        </div>
+                        <div class="right">
+                            <i class="fa-solid fa-cart-plus"></i>
+                        </div>
+                    </div>
+                </div>
+                <div class="item">
+                    <img src="../../assets/img/vegetables/tmatem.jpg">
+                    <div class="price">
+                        <div class="left">
+                            <h1>Tomatoes</h1>
+                            <p>5.62$</p>
+                        </div>
+                        <div class="right">
+                            <i class="fa-solid fa-cart-plus"></i>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        </div>
+  
+        <!-- Meats  section-->
+        <!------------------->
+        <div id="meats" class="section-select">
+        <div class="section">
+            <p>Section</p>
+            <h3>Meats</h3>
+        </div>
+        <div class="items">
+            <div class="frow">
+                <div class="item">
+                    <img src="../../assets/img/meats/baneh.jpg">
+                    <div class="price">
+                        <div class="left">
+                            <h1>Chicken breasts</h1>
+                            <p>6.7$</p>
+                        </div>
+                        <div class="right">
+                            <i class="fa-solid fa-cart-plus"></i>
+                        </div>
+                    </div>
+                </div>
+                <div class="item">
+                    <img src="../../assets/img/meats/dabos.jpg">
+                    <div class="price">
+                        <div class="left">
+                            <h1>Chicken staples</h1>
+                            <p>4.32$</p>
+                        </div>
+                        <div class="right">
+                            <i class="fa-solid fa-cart-plus"></i>
+                        </div>
+                    </div>
+                </div>
+                <div class="item">
+                    <img src="../../assets/img/meats/ferakh.jpg">
+                    <div class="price">
+                        <div class="left">
+                            <h1>Chicken</h1>
+                            <p>7.13$</p>
+                        </div>
+                        <div class="right">
+                            <i class="fa-solid fa-cart-plus"></i>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="srow">
+                <div class="item">
+                    <img src="../../assets/img/meats/wrak.jpg">
+                    <div class="price">
+                        <div class="left">
+                            <h1>Chicken thighs</h1>
+                            <p>5.62$</p>
+                        </div>
+                        <div class="right">
+                            <i class="fa-solid fa-cart-plus"></i>
+                        </div>
+                    </div>
+                </div>
+                <div class="item">
+                    <img src="../../assets/img/meats/mafrom.jpg">
+                    <div class="price">
+                        <div class="left">
+                            <h1>Minced meat</h1>
+                            <p>3.7$</p>
+                        </div>
+                        <div class="right">
+                            <i class="fa-solid fa-cart-plus"></i>
+                        </div>
+                    </div>
+                </div>
+                <div class="item">
+                    <img src="../../assets/img/meats/stek.jpg">
+                    <div class="price">
+                        <div class="left">
+                            <h1>Beef steak</h1>
+                            <p>5.56$</p>
+                        </div>
+                        <div class="right">
+                            <i class="fa-solid fa-cart-plus"></i>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            </div>
+        </div>
+  
+        <!-- Dryers  section-->
+        <!-------------------->
+        <div id="dryers" class="section-select active">
+          <div class="section">
+              <p>Section</p>
+              <h3>Dryers</h3>
+          </div>
+          <div class="items">
+              <div class="frow">
+                  <div class="item">
+                      <img src="../../assets/img/Dryers/rice.png">
+                      <div class="price">
+                          <div class="left">
+                              <h1>Rice</h1>
+                              <p>6.7$</p>
+                          </div>
+                          <div class="right">
+                              <i class="fa-solid fa-cart-plus"></i>
+                          </div>
+                      </div>
+                  </div>
+                  <div class="item">
+                      <img src="../../assets/img/Dryers/makrona.png">
+                      <div class="price">
+                          <div class="left">
+                              <h1>Pasta</h1>
+                              <p>4.32$</p>
+                          </div>
+                          <div class="right">
+                              <i class="fa-solid fa-cart-plus"></i>
+                          </div>
+                      </div>
+                  </div>
+                  <div class="item">
+                      <img src="../../assets/img/Dryers/lesan assfor.png">
+                      <div class="price">
+                          <div class="left">
+                              <h1>Macaroni</h1>
+                              <p>7.13$</p>
+                          </div>
+                          <div class="right">
+                              <i class="fa-solid fa-cart-plus"></i>
+                          </div>
+                      </div>
+                  </div>
+              </div>
+              <div class="srow">
+                  <div class="item">
+                      <img src="../../assets/img/Dryers/fol.jpg">
+                      <div class="price">
+                          <div class="left">
+                              <h1>Beans</h1>
+                              <p>3.7$</p>
+                          </div>
+                          <div class="right">
+                              <i class="fa-solid fa-cart-plus"></i>
+                          </div>
+                      </div>
+                  </div>
+                  <div class="item">
+                      <img src="../../assets/img/Dryers/homos.jpg">
+                      <div class="price">
+                          <div class="left">
+                              <h1>Chickpeas</h1>
+                              <p>5.56$</p>
+                          </div>
+                          <div class="right">
+                              <i class="fa-solid fa-cart-plus"></i>
+                          </div>
+                      </div>
+                  </div>
+                  <div class="item">
+                      <img src="../../assets/img/Dryers/adas.png">
+                      <div class="price">
+                          <div class="left">
+                              <h1>lentil</h1>
+                              <p>5.62$</p>
+                          </div>
+                          <div class="right">
+                              <i class="fa-solid fa-cart-plus"></i>
+                          </div>
+                      </div>
+                  </div>
+              </div>
+          </div>
+        </div>
+  
+        <!-- Fluids  section-->
+        <!------------------------>
+        <div id="fluids" class="section-select">
+          <div class="section">
+              <p>Section</p>
+              <h3>Fluids</h3>
+          </div>
+          <div class="items">
+              <div class="frow">
+                  <div class="item">
+                      <img src="../../assets/img/Fluids/zait.jpg">
+                      <div class="price">
+                          <div class="left">
+                              <h1>Oil</h1>
+                              <p>6.7$</p>
+                          </div>
+                          <div class="right">
+                              <i class="fa-solid fa-cart-plus"></i>
+                          </div>
+                      </div>
+                  </div>
+                  <div class="item">
+                      <img src="../../assets/img/Fluids/khal.jpg">
+                      <div class="price">
+                          <div class="left">
+                              <h1>Vinegar</h1>
+                              <p>4.32$</p>
+                          </div>
+                          <div class="right">
+                              <i class="fa-solid fa-cart-plus"></i>
+                          </div>
+                      </div>
+                  </div>
+                  <div class="item">
+                      <img src="../../assets/img/Fluids/soia sous.jpeg">
+                      <div class="price">
+                          <div class="left">
+                              <h1>Soy sauce</h1>
+                              <p>7.13$</p>
+                          </div>
+                          <div class="right">
+                              <i class="fa-solid fa-cart-plus"></i>
+                          </div>
+                      </div>
+                  </div>
+              </div>
+              <div class="srow">
+                  <div class="item">
+                      <img src="../../assets/img/Fluids/katchab.jpg">
+                      <div class="price">
+                          <div class="left">
+                              <h1>Ketchup</h1>
+                              <p>3.7$</p>
+                          </div>
+                          <div class="right">
+                              <i class="fa-solid fa-cart-plus"></i>
+                          </div>
+                      </div>
+                  </div>
+                  <div class="item">
+                      <img src="../../assets/img/Fluids/maioniz.jpg">
+                      <div class="price">
+                          <div class="left">
+                              <h1>mayonnaise</h1>
+                              <p>5.56$</p>
+                          </div>
+                          <div class="right">
+                              <i class="fa-solid fa-cart-plus"></i>
+                          </div>
+                      </div>
+                  </div>
+                  <div class="item">
+                      <img src="../../assets/img/Fluids/mastrda.jpg">
+                      <div class="price">
+                          <div class="left">
+                              <h1>mustard</h1>
+                              <p>5.62$</p>
+                          </div>
+                          <div class="right">
+                              <i class="fa-solid fa-cart-plus"></i>
+                          </div>
+                      </div>
+                  </div>
+              </div>
+          </div>
+        </div>
+        <!-- Meats  section-->
+        <!------------------->
+        <div id="snacks" class="section-select">
+          <div class="section">
+              <p>Section</p>
+              <h3>Snacks</h3>
+          </div>
+          <div class="items">
+              <div class="frow">
+                  <div class="item">
+                      <img src="../../assets/img/Snacks/chips.jpg">
+                      <div class="price">
+                          <div class="left">
+                              <h1>Chips</h1>
+                              <p>6.7$</p>
+                          </div>
+                          <div class="right">
+                              <i class="fa-solid fa-cart-plus"></i>
+                          </div>
+                      </div>
+                  </div>
+                  <div class="item">
+                      <img src="../../assets/img/Snacks/lib.jpg">
+                      <div class="price">
+                          <div class="left">
+                              <h1>Roasters</h1>
+                              <p>4.32$</p>
+                          </div>
+                          <div class="right">
+                              <i class="fa-solid fa-cart-plus"></i>
+                          </div>
+                      </div>
+                  </div>
+                  <div class="item">
+                      <img src="../../assets/img/Snacks/fosdok.png">
+                      <div class="price">
+                          <div class="left">
+                              <h1>Pistachio</h1>
+                              <p>7.13$</p>
+                          </div>
+                          <div class="right">
+                              <i class="fa-solid fa-cart-plus"></i>
+                          </div>
+                      </div>
+                  </div>
+              </div>
+              <div class="srow">
+                  <div class="item">
+                      <img src="../../assets/img/Snacks/kajo.png">
+                      <div class="price">
+                          <div class="left">
+                              <h1>Cashew</h1>
+                              <p>5.62$</p>
+                          </div>
+                          <div class="right">
+                              <i class="fa-solid fa-cart-plus"></i>
+                          </div>
+                      </div>
+                  </div>
+                  <div class="item">
+                      <img src="../../assets/img/Snacks/fishar.jpg">
+                      <div class="price">
+                          <div class="left">
+                              <h1>Popcorn</h1>
+                              <p>3.7$</p>
+                          </div>
+                          <div class="right">
+                              <i class="fa-solid fa-cart-plus"></i>
+                          </div>
+                      </div>
+                  </div>
+                  <div class="item">
+                      <img src="../../assets/img/Snacks/zora.jpg">
+                      <div class="price">
+                          <div class="left">
+                              <h1>Corn</h1>
+                              <p>5.56$</p>
+                          </div>
+                          <div class="right">
+                              <i class="fa-solid fa-cart-plus"></i>
+                          </div>
+                      </div>
+                  </div>
+              </div>
+              </div>
+        </div>
+    </div>
+  </div>
+  

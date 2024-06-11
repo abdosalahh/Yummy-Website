@@ -1,0 +1,457 @@
+/*--------------------------------------------------------------*/
+/* Fonts */
+:root
+{
+  --font-default: "Open Sans", system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", Arial, "Noto Sans", "Liberation Sans", sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
+  --font-primary: "Amatic SC", sans-serif;
+  --font-secondary: "Inter", sans-serif;
+}
+/* Colors */
+:root
+{
+  --color-default: #212529;
+  --color-primary: #ce1212;
+  --color-secondary: #37373f;
+}
+/*--------------------------------------------------------------*/
+/*--------------------------------------------------------------*/
+/*General*/
+a
+{
+  color: var(--color-primary);
+  text-decoration: none;
+}
+
+a:hover
+{
+  color: #ec2727;
+  text-decoration: none;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-family: var(--font-secondary);
+}
+/*--------------------------------------------------------------*/
+*
+{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+.contain
+{
+    width: 100%;
+    height: 100vh;
+    display: flex;
+    justify-content: space-between;
+    flex-direction: column;
+    background-color: #eee;
+}
+.contain .nav
+{
+    width: 100%;
+    height: 10%;
+    display: flex;
+    justify-content: space-around;
+    flex-direction: row;
+    position: fixed;
+    top: 0;
+    background-color: white;
+    z-index: 1000;
+}
+.contain .nav .logo
+{
+    width: 10%;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    font-size: 16px;
+    font-weight: bold;
+}
+.contain .nav .logo h1
+{
+    margin: auto;
+    font-size: 35px;
+    font-weight: bold;
+    display: flex;
+    align-items: center;
+}
+.contain .nav .logo h1 span
+{
+    color: #ce1212;
+}
+.contain .nav .choices
+{
+    width: 50%;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    margin-left: -150px;
+}
+.contain .nav .choices ul
+{
+    width: 100%;
+    list-style: none;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 5px;
+}
+.contain .nav .choices ul li
+{
+    font-size: 20px;
+    font-weight: bold;
+    margin: 0 30px;
+}
+.contain .nav .choices ul li a
+{
+    color: #7f7f90;
+    text-transform: uppercase;
+    text-decoration: none;
+    cursor: pointer;
+    transition: 0.3s;
+}
+.contain .nav .choices ul li a:hover
+{
+    color: black;
+    box-shadow: 0 2px 0 #ce1212;
+}
+.contain .nav a button
+{
+  background-color: #ce1212;
+  color: white;
+  border: none;
+  width: 120px;
+  height: 40px;
+  border-radius: 50px;
+  margin-top: 15%;
+  font-size: 16px;
+  font-weight: bold;
+  cursor: pointer;
+  transition: 0.3s;
+  box-shadow: 0 0 20px 10px rgba(206, 18, 18, 0);
+}
+.contain .nav a button:hover
+{
+    background-color: #ec2727;
+    box-shadow: 0 0 10px 5px rgba(201, 83, 83, 0.3);
+}
+.contain .screen
+{
+    width: 100%;
+    height: auto;
+    background-color: #eee;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding-top: 100px;
+}
+.contain .screen .infsection
+{
+    width: 90%;
+    height: 230px;
+    display: flex;
+    flex-direction: row;
+    justify-content: left;
+}
+.contain .screen .infsection .imgsection
+{
+    height: 100%;
+    width: 15%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: center;
+}
+.contain .screen .infsection .imgsection img
+{
+    width: 200px;
+    height: 200px;
+    border-radius: 50%;
+}
+.contain .screen .infsection .statsection
+{
+    height: 100%;
+    width: 60%;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+.contain .screen .infsection .statsection .name
+{
+    height: 30%;
+    width: 80%;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    gap: 25px;
+    margin-left: 50px;
+    font-size: 22px;
+}
+.contain .screen .infsection .statsection .name button
+{
+    width: 150px;
+    height: 30px;
+    background-color: #ccc;
+    color: black;
+    font-size: 16px;
+    border: none;
+    border-radius: 10px;
+    cursor: pointer;
+    transition: 0.3s;
+}
+.contain .screen .infsection .statsection .name button:hover
+{
+    background-color: white;
+}
+.contain .screen .infsection .statsection .name i
+{
+    font-size: 22px;
+    cursor: pointer;
+}
+.contain .screen .infsection .statsection .name span
+{
+    text-align: center;
+    font-size: 35px;
+    font-weight: bold;
+    color: #1b76b8;
+    font-family: serif;
+}
+.contain .screen hr
+{
+    width: 95%;
+    margin: 20px auto;
+    border: none;
+    height: 2px;
+    background-color: #585858;
+}
+.contain .screen .infsection .statsection .link
+{
+    height: 20%;
+    width: 50%;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    gap: 15px;
+    margin-left: 50px;
+}
+.contain .screen .infsection .statsection .link img
+{
+    width: 35px;
+    height: 35px;
+    cursor: pointer;
+}
+.contain .screen .infsection .statsection .fol
+{
+    height: 30%;
+    width: 70%;
+    margin-left: 50px;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    gap: 120px;
+}
+.contain .screen .infsection .statsection .fol a
+{
+    width: 15%;
+    height: 90%;
+    text-align: center;
+    margin-bottom: 10px;
+}
+.contain .screen .infsection .statsection .fol a span
+{
+    font-size: 32px;
+    font-weight: bold;
+    color: black;
+    font-family: serif;
+}
+.contain .screen .infsection .statsection .fol a p
+{
+    font-size: 18px;
+    margin-top: 0;
+    color: black;
+    font-family: serif;
+    margin-top: -8px;
+}
+.contain .screen .infsection .statsection .fol a:hover span,
+.contain .screen .infsection .statsection .fol a:hover p
+{
+    color: #ce1212;
+}
+.contain .screen .infsection .statsection .fol a:hover
+{
+    cursor: pointer;
+    transform: scale(1.3);
+    color: #ce1212;
+    border-bottom: 2px solid #ce1212;
+}
+.contain .screen .postsection
+{
+    width: 100%;
+    height: auto;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    align-items: flex-start;
+}
+.contain .screen .postsection .tab
+{
+  width: 22%;
+  height: auto;
+  margin-top: 20px;
+  margin-bottom: 20px;
+  border: 2px solid #ccc;
+  border-radius: 20px;
+  padding: 10px;
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+.contain .screen .postsection .tab img
+{
+    width: 100%;
+    border-radius: 10px;
+    margin-bottom: 10px;
+}
+.contain .screen .postsection .tab .desc
+{
+  width: 100%;
+  height: 60px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 30px;
+}
+.contain .screen .postsection .tab .desc span
+{
+    font-size: 28px;
+    color: black;
+    font-weight: bold;
+    font-family: serif;
+}
+.contain .screen .postsection .tab .desc i.fa-heart
+{
+  font-size: 30px;
+  margin-right: 5px;
+  color: #ccc;
+  cursor: pointer;
+  transition: color 0.3s;
+}
+.contain .screen .postsection .tab .desc i.fa-heart.red
+{
+  color: red;
+}
+#modalBackground
+{
+  display: none;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.5);
+  z-index: 999;
+}
+.modal
+{
+  display: none;
+  position: fixed;
+  width: 35%;
+  height: 90%;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  margin: 30px auto;
+  background-color: rgba(255, 255, 255, 0.5);
+  backdrop-filter: blur(10px);
+  padding: 20px;
+  border-radius: 10px;
+  z-index: 1000;
+}
+.modal label
+{
+  display: flex;
+  margin-bottom: 10px;
+  color: white;
+}
+.modal .input-group
+{
+  display: flex;
+  justify-content: space-between;
+}
+.modal input[type="text"]
+{
+  width: 60%;
+  padding: 10px;
+  margin-bottom: 10px;
+  border: 1px solid white;
+  border-radius: 5px;
+  resize: none;
+  background: transparent;
+  color: black;
+  font-size: 18px;
+}
+.modal select
+{
+  width: 30%;
+  padding: 10px;
+  margin-bottom: 10px;
+  border: 1px solid white;
+  border-radius: 5px;
+  background: transparent;
+  color: black;
+  font-size: 18px;
+  cursor: pointer;
+}
+.modal textarea
+{
+  width: 100%;
+  height: 15vh;
+  padding: 10px;
+  margin-bottom: 10px;
+  border: 1px solid white;
+  border-radius: 5px;
+  resize: none;
+  background: transparent;
+  color: black;
+  font-size: 18px;
+}
+#itemImage
+{
+  margin-bottom: 10px;
+  cursor: pointer;
+}
+.modal input[type="text"]::placeholder,
+.modal textarea::placeholder
+{
+  color: black;
+}
+.modal input[type="text"]:focus::placeholder,
+.modal textarea:focus::placeholder
+{
+  color: transparent;
+}
+.modal button
+{
+  width: 100%;
+  padding: 10px;
+  background: #1f89d4;
+  font-size: 20px;
+  font-weight: bold;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 0.3s;
+}
+.modal button:hover
+{
+  background-color: white;
+  color: #1f89d4;
+}

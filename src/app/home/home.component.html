@@ -1,0 +1,57 @@
+<div class="contain">
+    <div class="nav">
+        <div class="logo">
+            <h1>Yummy<span>.</span></h1>
+        </div>
+        <div class="choices">
+            <ul>
+              <li><a routerLink="/home"><i class="fas fa-house"></i></a></li>
+              <li><a routerLink="/menus"><i class="fas fa-utensils"></i></a></li>
+              <li><a routerLink="/favourite"><i class="fas fa-bookmark"></i></a></li>
+              <li><a routerLink="/planing"><i class="fas fa-table"></i></a></li>
+              <li><a routerLink="/market"><i class="fas fa-cart-shopping"></i></a></li>
+              <li><a routerLink="/profile"><i class="fas fa-user"></i></a></li>
+            </ul>
+        </div>
+        <div class="search-bar">
+          <input type="text" id="searchInput" placeholder="Search...">
+          <i class="fa-solid fa-filter" (click)="toggleFilterDropdown()">
+            <div class="filter-dropdown" [ngClass]="{ 'show': isFilterDropdownOpen }">
+              <ul>
+                  <li (click)="selectFilter('Recipe name')">Recipe name</li>
+                  <li (click)="selectFilter('Cooking time')">Cooking time</li>
+                  <li (click)="selectFilter('Ingredients')">Ingredients</li>
+                  <li (click)="selectFilter('Cuisine')">Cuisine</li>
+              </ul>
+          </div>
+          </i>
+          <button id="searchButton"><i class="fas fa-search"></i></button>
+        </div>
+        <a routerLink="/login"><button id="searchButton">Logout</button></a>
+    </div>
+    <div class="screen">
+        <div class="left">
+            <div class="draft">
+                <h2>
+                    Enjoy Your Healthy <br>
+                    Delicious Food
+                </h2>
+                <p>
+                Maintain balance by incorporating diverse nutrients, <br>
+                eating regular meals, and staying hydrated for a sustainable <br>
+                and nourishing eating schedule.
+                </p>
+                <div class="btns">
+                    <a routerLink="/recipes"><button>Go to Menus</button></a>
+                    <div class="play" id="watchVideoLink">
+                        <a href="https://www.youtube.com/watch?v=a-084pqI05U"><i class="fa-regular fa-circle-play"></i><span>Watch Video</span></a>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="right">
+            <img src="../../assets/img/menu-item-1.png">
+        </div>
+    </div>
+  </div>
+  

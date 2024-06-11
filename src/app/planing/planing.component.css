@@ -1,0 +1,289 @@
+/*--------------------------------------------------------------*/
+/* Fonts */
+@font-face {
+  font-family: 'Amatic SC';
+  src: url('../../assets/fonts/AmaticSC-Bold.ttf') format('truetype');
+  font-weight: normal;
+  font-style: normal;
+}
+:root
+{
+  --font-default: "Open Sans", system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", Arial, "Noto Sans", "Liberation Sans", sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
+  --font-primary: "Amatic SC", sans-serif;
+  --font-secondary: "Inter", sans-serif;
+}
+/* Colors */
+:root
+{
+  --color-default: #212529;
+  --color-primary: #ce1212;
+  --color-secondary: #37373f;
+}
+/*--------------------------------------------------------------*/
+/*--------------------------------------------------------------*/
+/*General*/
+a
+{
+  color: var(--color-primary);
+  text-decoration: none;
+}
+
+a:hover
+{
+  color: #ec2727;
+  text-decoration: none;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-family: var(--font-secondary);
+}
+/*--------------------------------------------------------------*/
+*
+{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+.contain
+{
+    width: 100%;
+    height: 100vh;
+    display: flex;
+    justify-content: space-between;
+    flex-direction: column;
+}
+.contain .nav
+{
+  width: 100%;
+  height: 10%;
+  display: flex;
+  justify-content: space-around;
+  flex-direction: row;
+  position: fixed;
+  top: 0;
+  background-color: white;
+  z-index: 1000;
+}
+.contain .nav .logo
+{
+  width: 10%;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  font-size: 16px;
+  font-weight: bold;
+}
+.contain .nav .logo h1
+{
+  margin: auto;
+  font-size: 35px;
+  font-weight: bold;
+  display: flex;
+  align-items: center;
+}
+.contain .nav .logo h1 span
+{
+  color: #ce1212;
+}
+.contain .nav .choices
+{
+  width: 50%;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  margin-left: -150px;
+}
+.contain .nav .choices ul
+{
+  width: 100%;
+  list-style: none;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-top: 5px;
+}
+.contain .nav .choices ul li
+{
+  font-size: 20px;
+  font-weight: bold;
+  margin: 0 30px;
+}
+.contain .nav .choices ul li a
+{
+  color: #7f7f90;
+  text-transform: uppercase;
+  text-decoration: none;
+  cursor: pointer;
+  transition: 0.3s;
+}
+.contain .nav .choices ul li a:hover
+{
+  color: black;
+  box-shadow: 0 2px 0 #ce1212;
+}
+.contain .nav .fa-solid.fa-receipt
+{
+  display: flex;
+  justify-content: center;
+  text-align: center;
+  width: 40px;
+  height: 40px;
+  margin-top: 15px;
+  font-size: 40px;
+  font-weight: bold;
+  cursor: pointer;
+  transition: 0.3s;
+  color: black;
+  box-shadow: 0 2px 0 #ce1212;
+}
+.contain .nav .fa-solid.fa-receipt:hover
+{
+  color: #7f7f90;
+  box-shadow: 0 2px 0 #7f7f90;
+}
+.contain .nav a button
+{
+  background-color: #ce1212;
+  color: white;
+  border: none;
+  width: 120px;
+  height: 40px;
+  border-radius: 50px;
+  margin-top: 15%;
+  font-size: 16px;
+  font-weight: bold;
+  cursor: pointer;
+  transition: 0.3s;
+  box-shadow: 0 0 20px 10px rgba(206, 18, 18, 0);
+}
+.contain .nav a button:hover
+{
+  background-color: #ec2727;
+  box-shadow: 0 0 10px 5px rgba(201, 83, 83, 0.3);
+}
+.contain .screen
+{
+    width: 100%;
+    height: 600vh;
+    background-color: #eee;
+    display: flex;
+    flex-direction: row;
+    padding-top: 100px;
+}
+.contain .screen
+{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    align-items: flex-start;
+}
+.contain .screen .plans
+{
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    align-items: center;
+}
+.contain .screen .plans .day
+{
+    width: 80%;
+    padding: 20px;
+    border: 3px solid #ccc;
+    border-radius: 20px;
+    background-color: #fff;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    transition: all 0.3s ease;
+}
+.contain .screen .plans .day:hover
+{
+    transform: translateY(-5px);
+    box-shadow: 0 15px 25px rgba(0, 0, 0, 0.2);
+    cursor: pointer;
+}
+.contain .screen .plans .day h2
+{
+    font-size: 38px;
+    margin-top: 0px;
+    text-transform: uppercase;
+    font-family: 'Amatic SC', sans-serif;
+    letter-spacing: 2px;
+    margin-bottom: 15px;
+    color: #ce1212;
+    text-align: center;
+    text-transform: uppercase;
+    position: relative;
+}
+.contain .screen .plans .day h2::after
+{
+    content: '';
+    position: absolute;
+    bottom: -5px;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 80%;
+    height: 2px;
+    background-color: #ce1212;
+}
+.contain .screen .plans .day .typs
+{
+  width: 95%;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 10px;
+}
+.contain .screen .plans .day .items
+{
+  width: 100%;
+  height: 50px;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+}
+.contain .screen .plans .day .items select
+{
+  width: 180px;
+  height: 30px;
+  cursor: pointer;
+}
+.contain .screen .plans .day button
+{
+  width: 100%;
+  height: 40px;
+  font-size: 18px;
+  font-weight: bold;
+  color: white;
+  background-color: #ce1212;
+  border: none;
+  border-radius: 5px;
+}
+.contain .screen .plans .day button:hover
+{
+  color:  #ce1212;
+  background-color: wheat;
+  border: 1px solid #ce1212;
+}
+.contain .screen .plans .day .typs p
+{
+    font-size: 22px;
+    margin-bottom: 10px;
+    color: #444;
+    line-height: 1.6;
+    font-family: serif;
+    font-style: italic;
+    border-left: 4px solid #ce1212;
+    padding-left: 12px;
+    font-weight: bold;
+}
+.contain .screen .plans .day .typs p + p
+{
+    margin-top: 8px;
+}

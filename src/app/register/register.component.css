@@ -1,0 +1,215 @@
+/*--------------------------------------------------------------*/
+/* Fonts */
+:root
+{
+  --font-default: "Open Sans", system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", Arial, "Noto Sans", "Liberation Sans", sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
+  --font-primary: "Amatic SC", sans-serif;
+  --font-secondary: "Inter", sans-serif;
+}
+/* Colors */
+:root
+{
+  --color-default: #212529;
+  --color-primary: #ce1212;
+  --color-secondary: #37373f;
+}
+/*--------------------------------------------------------------*/
+/*--------------------------------------------------------------*/
+/*General*/
+a
+{
+  color: var(--color-primary);
+  text-decoration: none;
+}
+
+a:hover
+{
+  color: #ec2727;
+  text-decoration: none;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6
+{
+  font-family: var(--font-secondary);
+}
+/*--------------------------------------------------------------*/
+*
+{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    font-family: sans-serif;
+}
+.contain
+{
+    width: 100%;
+    height: 100vh;
+    background: url(../../assets/img/Auth/back.jpg);
+    background-position: center;
+    background-size: cover;
+    display: flex;
+    justify-content: center;
+}
+.contain .register
+{
+    width: 480px;
+    height: 675px;
+    margin-top: 4%;
+    border-radius: 10px;
+    background: rgba(255, 255, 255, 0.11);
+    box-shadow: -1px 4px 28px 0px rgba(0, 0, 0, 0.7);
+    backdrop-filter: blur(10px);
+    padding: 65px 40px 40px;
+    position: relative;
+}
+.register .user
+{
+    width: 80px;
+    position: absolute;
+    top: -40px;
+    left: 50%;
+    transform: translateX(-50%);
+    border-radius: 50%;
+}
+
+.register h1
+{
+    color: white;
+    font-size: 24px;
+    font-weight: bold;
+    text-align: center;
+    margin-top: -10px;
+    margin-bottom: 20px;
+}
+.errorMessage
+{
+    color: rgb(255, 0, 0);
+    font-size: 18px;
+    font-weight: bold;
+    text-align: center;
+    margin-top: -10px;
+    margin-bottom: 20px;
+}
+.register form label
+{
+    color: white;
+    font-weight: bold;
+}
+.register form input
+{
+    width: 100%;
+    border: none;
+    border-bottom: 1px solid white;
+    background: transparent;
+    outline: none;
+    height: 40px;
+    color: white;
+    font-size: 17px;
+    margin-bottom: 20px;
+}
+.register form input::placeholder
+{
+    color: #efeeee;
+}
+.register form input:focus::placeholder
+{
+    color: transparent;
+}
+.register form button
+{
+    color: white;
+    font-size: 18px;
+    font-weight: bold;
+    background: #1f89d4;
+    width: 100%;
+    border: none;
+    border-radius: 5px;
+    outline: none;
+    padding: 10px;
+    margin-bottom: 20px;
+    cursor: pointer;
+    transition: background-color 0.3s, color 0.3s;
+}
+.register form button:hover
+{
+    background-color: white;
+    color: #1f89d4;
+}
+.register .line-or
+{
+    text-align: center;
+    position: relative;
+    margin-top: -15px;
+    margin-bottom: -15px;
+}
+.register .line-or span
+{
+    color: white;
+}
+.register .line-or span::after
+{
+    content: '';
+    position: absolute;
+    width: 115px;
+    height: 1px;
+    background: #e8e8e8;
+    right: 20px;
+    top: 50%;
+    transform: translateY(-50%);
+}
+.register .line-or span::before
+{
+    content: '';
+    position: absolute;
+    width: 115px;
+    height: 1px;
+    background: #e8e8e8;
+    left: 20px;
+    top: 50%;
+    transform: translateY(-50%);
+}
+.register .btns
+{
+    display: flex;
+    justify-content: space-between;
+    margin-top: 20px;
+}
+.register .btns .btn img
+{
+    width: 155px;
+    border-radius: 1px solid;
+    border-radius: 5px;
+}
+.register .btns .btn img.fb
+{
+    border-color: #1f89d4;
+}
+.register .btns .btn img.google
+{
+    background-color: #fb5859;
+}
+.register .signup
+{
+    margin-top: 20px;
+    font-size: 15px;
+    color: white;
+    text-align: center;
+}
+.register .signup a
+{
+    color: #387aff;
+    text-decoration: underline;
+    text-decoration-color:#387aff ;
+    font-weight: bold;
+    transition: 0.3s;
+}
+.register .signup a:hover
+{
+    color: orange;
+    text-decoration: underline;
+}
